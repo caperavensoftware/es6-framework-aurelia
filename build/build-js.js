@@ -5,7 +5,9 @@ import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
 import * as paths from './paths';
 import gulpsync from 'gulp-sync';
+import compilerOptions from './babel-options';
 
+const assign = Object.assign || require('object.assign');
 const sync = gulpsync(gulp).sync;
 
 gulp.task('copy-app-html', function() {
@@ -16,9 +18,7 @@ gulp.task('copy-app-html', function() {
 gulp.task('build-js', sync(['clean-app', 'copy-app-html']), function() {       
     return gulp.src(paths.sourceFiles)
      .pipe(sourcemaps.init())
-     .pipe(babel({
-			presets: ['es2015']
-		}))
+     .pipe(babel(assign({}, compilerOptions.system())))
     .pipe(sourcemaps.write({includeContent: false, sourceRoot: '/src'}))
     .pipe(gulp.dest(paths.destPath));
 });
