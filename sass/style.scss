@@ -1,0 +1,13 @@
+@import 'colors.scss';
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("./fonts/OpenSans-Bold.ttf");
+}
+
+$font-stack: "OpenSans";
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+}

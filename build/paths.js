@@ -2,6 +2,7 @@ module.exports = {
     destPath: 'app/',
     publishPath: 'publish/',
     stylesPath: 'styles/',
+    styleFontsPath: 'styles/fonts/',
     
     publishAppPath: 'publish/app/',
     publishStylesPath: 'publish/styles/',
@@ -15,5 +16,6 @@ module.exports = {
     sourceSass: 'src/**/*.scss',
     sourceStyles: 'src/**/*.css',
     sassFiles: 'sass/**/*.scss',
+    fontFiles: 'sass/fonts/**/*.ttf',
     jspmFiles: 'jspm_packages/**/*.*'
 };
