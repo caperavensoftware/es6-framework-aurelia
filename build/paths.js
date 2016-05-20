@@ -15,6 +15,7 @@ module.exports = {
     sourceTemplates: 'src/**/*.html',
     sourceSass: 'src/**/*.scss',
     sourceStyles: 'src/**/*.css',
+    sourceJson: 'src/**/*.json',
     sassFiles: 'sass/**/*.scss',
     fontFiles: 'sass/fonts/**/*.ttf',
     jspmFiles: 'jspm_packages/**/*.*'
