@@ -1,11 +1,17 @@
-import * as icons from './icons.json!json';
-
 export class SvgStore {
+    constructor(icons = null) {
+        this.icons = icons;
+        
+        if (!icons) {
+            this.icons = System.import('./icons.json!json')
+        }
+    }
+    
     findItemByName(name) {
-        const icon = icons.images.find((image) => {
+        let icon = this.icons.images.find((image) => {
             return image.name === name;
         });     
         
         return icon;   
-    }    
+    } 
 }

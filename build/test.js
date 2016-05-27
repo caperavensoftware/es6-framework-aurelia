@@ -7,6 +7,7 @@ import istanbul from 'gulp-istanbul';
 import mocha from 'gulp-mocha';
 import gulpParam from 'gulp-param';
 import gulpInstance from 'gulp';
+import debug from 'gulp-debug';
 
 const gulp = gulpParam(gulpInstance, process.argv);
 
@@ -16,6 +17,12 @@ let testContainer = null;
 function testUnit(path) {
     return gulp.src(path)
     .pipe(mocha());
+}
+
+function testControls(path) {
+  return gulp.src(path)
+  .pipe(debug())
+  .pipe(mocha());
 }
 
 function coverageUnit(done) {
@@ -84,6 +91,16 @@ gulp.task('test-unit', function(filename) {
   }
   
   testUnit(path);
+});
+
+gulp.task('test-controls', function(filename){
+  let path = 'tests/controls/**/*.js';
+  
+  if (filename) {
+    path = `tests/controls/${filename}`;
+  }
+  
+  testControls(path);  
 });
 
 gulp.task('coverage-unit', coverageUnit);

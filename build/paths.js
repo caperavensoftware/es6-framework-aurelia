@@ -7,7 +7,8 @@ module.exports = {
     publishAppPath: 'publish/app/',
     publishStylesPath: 'publish/styles/',
     publishJspmPath: 'publish/jspm_packages',
-        
+
+    iconFiles: 'images/icons/*.svg',    
     appFiles: 'app/**/*.js',
     notAppFile: '!app/**/app.js', 
     stylesFiles: 'styles/**/*.css',
