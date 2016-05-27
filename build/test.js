@@ -115,3 +115,4 @@ gulp.task('missing-tests', function() {
   });
 });
 
+gulp.task('test-all', ['test-unit', 'test-controls']);
