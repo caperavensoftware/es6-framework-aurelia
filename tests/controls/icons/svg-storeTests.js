@@ -7,9 +7,6 @@ let icons = require('./icons.json');
 const expect = chai.expect;
 
 describe('svg store tests', function() {
-    before(function() {
-    }) 
-    
     it ('do something', function() {
         const store = new SvgStore(icons);            
         const icon = store.findItemByName('add');

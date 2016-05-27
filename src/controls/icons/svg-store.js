@@ -3,7 +3,7 @@ export class SvgStore {
         this.icons = icons;
         
         if (!icons) {
-            this.icons = System.import('./icons.json!json')
+            this.icons = System.import('./icons.json!json');
         }
     }
     

@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import gulp from 'gulp';
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';

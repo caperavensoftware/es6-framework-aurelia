@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import paths from './paths';

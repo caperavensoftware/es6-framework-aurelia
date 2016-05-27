@@ -29,14 +29,14 @@ export class CodeSummary {
         let result = new CodeSummary();
         result.path = path;
         
-        for(let value of syntax.body) {            
-           if (value.type === "ImportDeclaration"){
+        for (let value of syntax.body) {            
+           if (value.type === 'ImportDeclaration') {
                result.imports.push(ImportSummary.createFromSyntax(value));            
            }
-           else if (value.type === "ClassDeclaration") {
+           else if (value.type === 'ClassDeclaration') {
                result.classes.push(ClassSummary.createFromSyntax(value));
            }
-           else if (value.type === "ExportNamedDeclaration" || value.type === "ExportDefaultDeclaration") {
+           else if (value.type === 'ExportNamedDeclaration' || value.type === 'ExportDefaultDeclaration') {
                result.classes.push(ClassSummary.createFromSyntax(value.declaration));
            }
         }
@@ -94,7 +94,7 @@ export class ClassSummary {
         const result = new ClassSummary();        
         result.name = syntax.id.name;
         
-        for(let member of syntax.body.body) {
+        for (let member of syntax.body.body) {
            if (member.kind === 'method') {
                result.functions.push(member.key.name);
            }

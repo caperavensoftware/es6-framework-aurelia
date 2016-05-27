@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import gulp from 'gulp';
 import bump from 'gulp-bump';
 import rename from 'gulp-rename';
