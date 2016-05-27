@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import through from 'through2'; 
 import ParsedCodeContainer from './test-parser';
 import {PrintSummaryContainer} from './test-parser';
@@ -33,7 +31,7 @@ function coverageUnit(done) {
 
 function processSource() {
   return new Promise(function(resolved) {
-    gulp.src('src/**/*.js')
+    gulp.src(['src/**/*.js', '!src/controls/icons/*.js'])
     .pipe(through({objectMode: true}, performProcessSource)) 
     .on('finish', resolved);         
   });
