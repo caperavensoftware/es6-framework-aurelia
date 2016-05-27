@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import chai from 'chai';
 import {Welcome} from './../../../src/welcome/welcome.js';
 

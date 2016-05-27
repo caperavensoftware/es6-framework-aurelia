@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import chai from 'chai';
 import {App} from './../../src/app.js';
 

@@ -1,5 +1,3 @@
-/*jshint strict: false */
-
 import chai from 'chai';
 import sinon from 'sinon';
 import {configure} from './../../src/main.js';

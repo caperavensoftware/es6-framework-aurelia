@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "system"
+    },
+    "exclude": [
+        "node_modules",
+        "jspm_packages",
+        "app"
+    ]
+}
