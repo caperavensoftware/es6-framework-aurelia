@@ -63,6 +63,6 @@ module.exports = function(config) {
                 reporter: 'progress',
                 ui: 'bdd'
             }
-        },            
+        }     
     });  
 };
